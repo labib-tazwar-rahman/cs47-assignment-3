@@ -29,14 +29,14 @@ export default function Search(props) {
   return (
     <TouchableWithoutFeedback onPress={() => 
     {Keyboard.dismiss()}}>
-			<View style={styles.container}>
-				<SearchBar
-					platform={(Platform.OS === 'ios') ? "ios" : "android"}
-					onChangeText={text => setText(text)}
-					value={text}
-					
-					
-					keyboardShouldPersistTaps={'handled'}
+	<View style={styles.container}>
+		<SearchBar
+			platform={(Platform.OS === 'ios') ? "ios" : "android"}
+			onChangeText={text => setText(text)}
+			value={text}
+
+
+			keyboardShouldPersistTaps={'handled'}
           onSubmitEditing={() => props.getQuery(text)}
           placeholder='Search for News'
 				/>
